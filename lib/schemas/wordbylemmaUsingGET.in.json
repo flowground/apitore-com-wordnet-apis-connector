@@ -1,0 +1,18 @@
+{
+    "type": "object",
+    "properties": {
+        "access_token": {
+            "required": true,
+            "type": "string"
+        },
+        "lemma": {
+            "required": true,
+            "type": "string"
+        },
+        "pos": {
+            "required": false,
+            "type": "string",
+            "default": "n,v,a,r"
+        }
+    }
+}

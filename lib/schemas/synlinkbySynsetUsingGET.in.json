@@ -1,0 +1,18 @@
+{
+    "type": "object",
+    "properties": {
+        "access_token": {
+            "required": true,
+            "type": "string"
+        },
+        "synset": {
+            "required": true,
+            "type": "string"
+        },
+        "link": {
+            "required": false,
+            "type": "string",
+            "default": "syns"
+        }
+    }
+}

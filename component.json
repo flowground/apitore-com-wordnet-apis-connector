@@ -1,0 +1,170 @@
+{
+    "title": "WordNet APIs",
+    "description": "You can access ALL WordNet DB.<BR />[Endpoint] https://api.apitore.com/api/46",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/apitore.com/wordnetApis/0.0.1/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://api.apitore.com/api/46",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "sensebysynsetUsingGET": {
+            "main": "./lib/actions/sensebysynsetUsingGET.js",
+            "title": "WordNet WebAPI. Return Sense object.",
+            "description": "Japanese WordNet.<BR />Response<BR />&nbsp; Github: <a href=\"https://github.com/keigohtr/apitore-response-parent/tree/master/wordnet-response\">wordnet-response</a><BR />",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/sensebysynsetUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "sensebywordidUsingGET": {
+            "main": "./lib/actions/sensebywordidUsingGET.js",
+            "title": "WordNet WebAPI. Return Sense object.",
+            "description": "Japanese WordNet.<BR />Response<BR />&nbsp; Github: <a href=\"https://github.com/keigohtr/apitore-response-parent/tree/master/wordnet-response\">wordnet-response</a><BR />",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/sensebywordidUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "synlinkbySynsetUsingGET": {
+            "main": "./lib/actions/synlinkbySynsetUsingGET.js",
+            "title": "WordNet WebAPI. Return SynLink object.",
+            "description": "Japanese WordNet.<BR />Response<BR />&nbsp; Github: <a href=\"https://github.com/keigohtr/apitore-response-parent/tree/master/wordnet-response\">wordnet-response</a><BR />",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/synlinkbySynsetUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "synsetbyNameUsingGET": {
+            "main": "./lib/actions/synsetbyNameUsingGET.js",
+            "title": "WordNet WebAPI. Return Synset object.",
+            "description": "Japanese WordNet.<BR />Response<BR />&nbsp; Github: <a href=\"https://github.com/keigohtr/apitore-response-parent/tree/master/wordnet-response\">wordnet-response</a><BR />",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/synsetbyNameUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "synsetbysynsetUsingGET": {
+            "main": "./lib/actions/synsetbysynsetUsingGET.js",
+            "title": "WordNet WebAPI. Return Synset object.",
+            "description": "Japanese WordNet.<BR />Response<BR />&nbsp; Github: <a href=\"https://github.com/keigohtr/apitore-response-parent/tree/master/wordnet-response\">wordnet-response</a><BR />",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/synsetbysynsetUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "synsetdefbysynsetUsingGET": {
+            "main": "./lib/actions/synsetdefbysynsetUsingGET.js",
+            "title": "WordNet WebAPI. Return SynsetDef object.",
+            "description": "Japanese WordNet.<BR />Response<BR />&nbsp; Github: <a href=\"https://github.com/keigohtr/apitore-response-parent/tree/master/wordnet-response\">wordnet-response</a><BR />",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/synsetdefbysynsetUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "wordbylemmaUsingGET": {
+            "main": "./lib/actions/wordbylemmaUsingGET.js",
+            "title": "WordNet WebAPI. Return Word object.",
+            "description": "Japanese WordNet.<BR />Response<BR />&nbsp; Github: <a href=\"https://github.com/keigohtr/apitore-response-parent/tree/master/wordnet-response\">wordnet-response</a><BR />",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/wordbylemmaUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "wordbyidUsingGET": {
+            "main": "./lib/actions/wordbyidUsingGET.js",
+            "title": "WordNet WebAPI. Return Word object.",
+            "description": "Japanese WordNet.<BR />Response<BR />&nbsp; Github: <a href=\"https://github.com/keigohtr/apitore-response-parent/tree/master/wordnet-response\">wordnet-response</a><BR />",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/wordbyidUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}
